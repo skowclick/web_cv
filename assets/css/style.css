@@ -1193,3 +1193,15 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+.hidden {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

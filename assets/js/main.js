@@ -6,6 +6,19 @@
 */
 (function() {
   "use strict";
+  const iconBox = document.querySelector('.icon-box');
+const p = document.querySelector('.icon-box p');
+
+iconBox.addEventListener('mouseenter', function() {
+  p.classList.remove('hidden');
+  p.classList.add('fade-in');
+});
+
+iconBox.addEventListener('mouseleave', function() {
+  p.classList.remove('fade-in');
+  p.classList.add('hidden');
+});
+
 
   /**
    * Easy selector helper function
