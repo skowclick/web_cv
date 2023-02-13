@@ -826,6 +826,32 @@ iconBox.addEventListener('mouseleave', function() {
 });
 
   </script>
+  <script>
+    // Selecciona el elemento <p>
+const text = document.querySelector("#services p");
+
+// Array de frases que serán escritas en el elemento <p>
+const phrases = [  "Java",  "Versiones: 8, 11",  "Microservicios"];
+
+// Contador para rastrear la frase actual
+let count = 0;
+
+// Función que escribe una frase en el elemento <p>
+function typeWriter() {
+  // Si todavía hay frases en el array
+  if (count < phrases.length) {
+    // Agrega la siguiente frase al elemento <p>
+    text.innerHTML = phrases[count];
+    // Incrementa el contador
+    count++;
+    // Llama a la función de nuevo después de un intervalo de tiempo
+    setTimeout(typeWriter, 1000);
+  }
+}
+
+// Inicia la escritura
+typeWriter();
+  </script>
 
 </body>
 
