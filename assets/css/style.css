@@ -1194,14 +1194,14 @@ section .container {
   color: #fff;
 }
 
-#services p {
+#services .icon-box p {
   opacity: 0;
   font-size: 24px;
   margin-top: 10px;
   transition: opacity 1s ease-in-out;
 }
 
-#services p.visible {
+#services .icon-box p.visible {
   opacity: 1;
 }
 
