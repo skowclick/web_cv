@@ -812,30 +812,23 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    // Selecciona el elemento <p>
-const text = document.querySelector(".services .icon-box p");
-
-// Array de frases que serán escritas en el elemento <p>
-const phrases = [  "Java",  "Versiones: 8, 11",  "Microservicios"];
-
-// Contador para rastrear la frase actual
-let count = 0;
-
-// Función que escribe una frase en el elemento <p>
-function typeWriter() {
-  // Si todavía hay frases en el array
-  if (count < phrases.length) {
-    // Agrega la siguiente frase al elemento <p>
-    text.innerHTML = phrases[count];
-    // Incrementa el contador
-    count++;
-    // Llama a la función de nuevo después de un intervalo de tiempo
-    setTimeout(typeWriter, 1000);
-  }
+    const iconBox = document.querySelector('.services .icon-box');
+const p = document.querySelector('.services .icon-box p');
+const textArray = p.innerHTML.split('');
+p.innerHTML = '';
+for (let i = 0; i < textArray.length; i++) {
+  p.innerHTML += `<span style="transition-delay: ${i * 0.1}s">${textArray[i]}</span>`;
 }
 
-// Inicia la escritura
-typeWriter();
+iconBox.addEventListener('mouseenter', function() {
+  p.classList.remove('hidden');
+  p.classList.add('fade-in');
+});
+
+iconBox.addEventListener('mouseleave', function() {
+  p.classList.remove('fade-in');
+  p.classList.add('hidden');
+});
   </script>
 
 </body>
