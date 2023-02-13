@@ -1207,19 +1207,13 @@ section .container {
 }
 .services .icon-box p {
   opacity: 0;
-  position: relative;
-  display: inline-block;
 }
 
 .services .icon-box p span {
   opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
   transition: all 0.5s ease;
 }
 
 .services .icon-box p.fade-in span {
   opacity: 1;
-  top: 0;
 }
