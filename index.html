@@ -509,15 +509,15 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
-            <div class="icon"><i class="bi bi-filetype-js"></i></div>
+            <div class="icon"><i class="bi bi-filetype-js"></i></i></div>
             <h4><a href="">Javascript</a></h4>
             <p>Scripts <br> Validaciones</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
             <div class="icon"><i class='bx bxl-react'></i></div>
             <h4><a href="">React</a></h4>
@@ -811,25 +811,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    const iconBox = document.querySelector('.services .icon-box');
-const p = document.querySelector('.services .icon-box p');
-const textArray = p.innerHTML.split('');
-p.innerHTML = '';
-for (let i = 0; i < textArray.length; i++) {
-  p.innerHTML += `<span style="transition-delay: ${i * 0.1}s">${textArray[i]}</span>`;
-}
 
-iconBox.addEventListener('mouseenter', function() {
-  p.classList.remove('hidden');
-  p.classList.add('fade-in');
-});
-
-iconBox.addEventListener('mouseleave', function() {
-  p.classList.remove('fade-in');
-  p.classList.add('hidden');
-});
-  </script>
 
 </body>
 
