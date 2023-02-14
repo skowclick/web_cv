@@ -1193,27 +1193,3 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
-.hidden {
-  opacity: 0;
-}
-
-.fade-in {
-  animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.services .icon-box p {
-  opacity: 0;
-}
-
-.services .icon-box p span {
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
-.services .icon-box p.fade-in span {
-  opacity: 1;
-}
