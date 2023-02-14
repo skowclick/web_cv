@@ -807,6 +807,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const iconBox = document.querySelector('.services .icon-box');
+const p = document.querySelector('.services .icon-box p');
+const textArray = p.innerHTML.split('');
+p.innerHTML = '';
+for (let i = 0; i < textArray.length; i++) {
+  p.innerHTML += `<span style="transition-delay: ${i * 0.1}s">${textArray[i]}</span>`;
+}
+
+iconBox.addEventListener('mouseenter', function() {
+  p.classList.remove('hidden');
+  p.classList.add('fade-in');
+});
+
+iconBox.addEventListener('mouseleave', function() {
+  p.classList.remove('fade-in');
+  p.classList.add('hidden');
+});
+  </script>
 
 
 </body>
