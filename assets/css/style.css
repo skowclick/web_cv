@@ -1211,7 +1211,7 @@ section .container {
 
 .services .icon-box p span {
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.001s ease;
 }
 
 .services .icon-box p.fade-in span {
