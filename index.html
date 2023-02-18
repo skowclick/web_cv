@@ -644,7 +644,7 @@ iconBoxes.forEach(iconBox => {
   const textArray = p.innerHTML.split('');
   p.innerHTML = '';
   for (let i = 0; i < textArray.length; i++) {
-    p.innerHTML += `<span style="transition-delay: ${i * 0.1}s">${textArray[i]}</span>`;
+    p.innerHTML += `<span style="transition-delay: ${i * 0.05}s">${textArray[i]}</span>`;
   }
 
   iconBox.addEventListener('mouseenter', function() {
