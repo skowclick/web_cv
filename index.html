@@ -640,12 +640,16 @@
 const iconBoxes = document.querySelectorAll('.services .icon-box');
 
 iconBoxes.forEach(iconBox => {
+  const textoFinal="";
   const p = iconBox.querySelector('p');
   const textArray = p.innerHTML.split('');
   p.innerHTML = '';
   for (let i = 0; i < textArray.length; i++) {
     p.innerHTML += `<span style="transition-delay: ${i * 0.05}s">${textArray[i]}</span>`;
+
   }
+  textoFinal=p.innerHTML;
+p.innerHTML=textoFinal;
 
   iconBox.addEventListener('mouseenter', function() {
     p.classList.remove('hidden');
