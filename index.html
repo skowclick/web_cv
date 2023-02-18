@@ -648,18 +648,13 @@ iconBoxes.forEach(iconBox => {
     p.innerHTML += `<span style="transition-delay: ${i * 0.05}s">${textArray[i]}</span>`;
 
   }
-  textoFinal=p.innerHTML;
-p.innerHTML=textoFinal;
 
   iconBox.addEventListener('mouseenter', function() {
     p.classList.remove('hidden');
     p.classList.add('fade-in');
   });
 
-  iconBox.addEventListener('mouseleave', function() {
-    p.classList.remove('fade-in');
-    p.classList.add('hidden');
-  });
+  
 });
 
   </script>
