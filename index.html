@@ -654,7 +654,10 @@ iconBoxes.forEach(iconBox => {
     p.classList.add('fade-in');
   });
 
-  
+  iconBox.addEventListener('mouseleave', function() {
+    p.classList.remove('fade-in');
+    p.classList.add('hidden');
+  });
 });
 
   </script>
